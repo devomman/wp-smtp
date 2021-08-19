@@ -2,6 +2,7 @@
 ### Step 1: Goto your wp-config.php file and below code and change yours:
 
 ```
+// ** SMTP Please Follow here https://github.com/devomman/wp-smtp/ **//
 define( 'SMTP_USER',   'user@example.com' );    // Username to use for SMTP authentication
 define( 'SMTP_PASS',   'smtp password' );       // Password to use for SMTP authentication
 define( 'SMTP_HOST',   'smtp.example.com' );    // The hostname of the mail server
@@ -15,6 +16,7 @@ define( 'SMTP_DEBUG',   0 );                    // for debugging purposes only s
 ### Step 2: This will work if this code apply in function.php or custom plugin:
 
 ```
+// ** SMTP Please Follow here https://github.com/devomman/wp-smtp/ **//
 add_action( 'phpmailer_init', 'send_smtp_email' );
 function send_smtp_email( $phpmailer ) {
 	$phpmailer->isSMTP();
